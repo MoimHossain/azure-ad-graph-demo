@@ -18,8 +18,8 @@ namespace Vax
             Console.WriteLine("U/M ? ");
             var sign = Console.ReadLine();
 
-            var user = default(AdUser);
-            if("U".Equals(sign, StringComparison.OrdinalIgnoreCase))
+            AdUser user;
+            if ("U".Equals(sign, StringComparison.OrdinalIgnoreCase))
             {
                 user = GetUserAsync(userId).Result;
 
