@@ -67,6 +67,30 @@ namespace Vax
         }
     }
 
+    public class AdManagerReference
+    {
+
+        [JsonProperty("odata.metadata")]
+        public string OdataMetadata { get; set; }
+
+        [JsonProperty("url")]
+        public string Url { get; set; }
+
+        public string ManagerId
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(this.Url))
+                {
+                    var segments = new Uri(this.Url).Segments;
+                    return segments[segments.Length - 2].Replace("/", string.Empty);
+                }
+                return string.Empty;
+            }
+        }
+
+    }
+
 
     public partial class AdUserCollection
     {
