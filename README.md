@@ -26,6 +26,7 @@ dotnet run
 ```
 
 This would ask for a User Object ID. And a mode - either ```U``` or ```M```.
+For user ID you can either enter the object ID (AD object ID) or an UPN (e.g. email account) - both should work.
 
 ```U``` : Is to query user details via Graph api
 And 
