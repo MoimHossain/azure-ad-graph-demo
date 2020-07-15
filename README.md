@@ -32,4 +32,6 @@ For user ID you can either enter the object ID (AD object ID) or an UPN (e.g. em
 And 
 ```M``` : Is to query the manager info first then getting the details of the manager object.
 
+> Manager is retrieved in two seperate calls to windows.graph.net api. First gives the reference of the manager object id and the second actually pulls down the details of the user object.
+
 ### That's all
